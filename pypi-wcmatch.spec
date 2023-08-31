@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-wcmatch
-Version  : 8.4.1
-Release  : 2
-URL      : https://files.pythonhosted.org/packages/b7/94/5dd083fc972655f6689587c3af705aabc8b8e781bacdf22d6d2282fe6142/wcmatch-8.4.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b7/94/5dd083fc972655f6689587c3af705aabc8b8e781bacdf22d6d2282fe6142/wcmatch-8.4.1.tar.gz
+Version  : 8.5
+Release  : 3
+URL      : https://files.pythonhosted.org/packages/92/51/72ce10501dbfe508808fd6a637d0a35d1b723a5e8c470f3d6e9458a4f415/wcmatch-8.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/92/51/72ce10501dbfe508808fd6a637d0a35d1b723a5e8c470f3d6e9458a4f415/wcmatch-8.5.tar.gz
 Summary  : Wildcard/glob file name matcher.
 Group    : Development/Tools
 License  : MIT
@@ -31,6 +31,7 @@ BuildRequires : pypi-virtualenv
 [![Build][github-ci-image]][github-ci-link]
 [![Coverage Status][codecov-image]][codecov-link]
 [![PyPI Version][pypi-image]][pypi-link]
+[![PyPI Downloads][pypi-down]][pypi-link]
 [![PyPI - Python Version][python-image]][pypi-link]
 ![License][license-image-mit]
 # Wildcard Match
@@ -64,10 +65,10 @@ python3 components for the pypi-wcmatch package.
 
 
 %prep
-%setup -q -n wcmatch-8.4.1
-cd %{_builddir}/wcmatch-8.4.1
+%setup -q -n wcmatch-8.5
+cd %{_builddir}/wcmatch-8.5
 pushd ..
-cp -a wcmatch-8.4.1 buildavx2
+cp -a wcmatch-8.5 buildavx2
 popd
 
 %build
@@ -75,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683224190
+export SOURCE_DATE_EPOCH=1693495877
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -100,7 +101,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-wcmatch
-cp %{_builddir}/wcmatch-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-wcmatch/25b4af7bbf50d4243728dc64e4dec12a687da750 || :
+cp %{_builddir}/wcmatch-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-wcmatch/e2b4724989b139f549c1ebc106c651a4e6d5228a || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -120,7 +121,7 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pypi-wcmatch/25b4af7bbf50d4243728dc64e4dec12a687da750
+/usr/share/package-licenses/pypi-wcmatch/e2b4724989b139f549c1ebc106c651a4e6d5228a
 
 %files python
 %defattr(-,root,root,-)
