@@ -1,5 +1,5 @@
 PKG_NAME := pypi-wcmatch
-URL = https://files.pythonhosted.org/packages/ea/c4/55e0d36da61d7b8b2a49fd273e6b296fd5e8471c72ebbe438635d1af3968/wcmatch-8.5.2.tar.gz
+URL = https://files.pythonhosted.org/packages/55/90/a29d5b359c128c48e32a2dc161464d6aab822df82d3bf1c1286231eda3c2/wcmatch-9.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
