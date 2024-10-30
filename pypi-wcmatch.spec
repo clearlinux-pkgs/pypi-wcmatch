@@ -7,7 +7,7 @@
 #
 Name     : pypi-wcmatch
 Version  : 10.0
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/41/ab/b3a52228538ccb983653c446c1656eddf1d5303b9cb8b9aef6a91299f862/wcmatch-10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/41/ab/b3a52228538ccb983653c446c1656eddf1d5303b9cb8b9aef6a91299f862/wcmatch-10.0.tar.gz
 Summary  : Wildcard/glob file name matcher.
